@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {NavLink, useNavigate} from "react-router-dom";
-import {Menu, X, LogOut, Map, LayoutGrid, Users, Target} from "lucide-react";
+import {Menu, X, LogOut, Map, LayoutGrid, Users, Target, Trophy} from "lucide-react";
 import {useStore} from "../store/useStore";
 import {auth} from "../firebase";
 import {signOut} from "firebase/auth";
@@ -28,12 +28,12 @@ export default function Navbar() {
 				{name: "Users", path: "/admin/users", icon: Users},
 				{name: "Challenges", path: "/admin/challenges", icon: Target},
 				{name: "Secrets", path: "/admin/secrets", icon: Map},
-				{name: "Leaderboard", path: "/leaderboard", icon: Target},
+				{name: "Leaderboard", path: "/leaderboard", icon: Trophy},
 			]
 		:	[
 				{name: "Challenges", path: "/user/challenges", icon: LayoutGrid},
 				{name: "Secrets", path: "/user/secrets", icon: Map},
-				{name: "Leaderboard", path: "/leaderboard", icon: Target},
+				{name: "Leaderboard", path: "/leaderboard", icon: Trophy},
 			];
 
 	return (
